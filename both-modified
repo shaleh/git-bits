@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for f in $(git status | grep 'both modified:' | cut -f2 -d:); do
+    emacsclient $f
+done
